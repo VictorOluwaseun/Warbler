@@ -1,5 +1,6 @@
 package com.decagon.warbler
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,6 +14,7 @@ class SecondActivity : AppCompatActivity() {
 
         val addBtn = findViewById<Button>(R.id.button)
         val removeBtn = findViewById<Button>(R.id.button2)
+        val backBtn = findViewById<Button>(R.id.back)
 
         // To add fragment to onclick listener
         addBtn.setOnClickListener{
@@ -22,6 +24,11 @@ class SecondActivity : AppCompatActivity() {
         // Remove fragment onclick listener
         removeBtn.setOnClickListener{
             supportFragmentManager.popBackStack()
+        }
+
+        // Back to first activity
+        backBtn.setOnClickListener{
+            navigateActivity()
         }
 
     }
@@ -51,6 +58,10 @@ class SecondActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.second_layout, fragment).addToBackStack(null).commit()
 //        supportFragmentManager.beginTransaction().add(R.id.second_layout, fragment).addToBackStack(null).commit()
     }
-    // return to prev task method
+
+    private fun navigateActivity(){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 
 }
