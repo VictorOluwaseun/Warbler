@@ -12,10 +12,9 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/position"
+            android:id="@+id/fragment_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stack No:"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
