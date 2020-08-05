@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Warbler</string>
+    <string name="lblLandscape">Activity State:</string>
+    <string name="txtState"></string>
+    <string name="lblOr">Orientation:</string>
+    <string name="txtOr">dummy_text</string>
+    <string name="btnPlay">Play</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
